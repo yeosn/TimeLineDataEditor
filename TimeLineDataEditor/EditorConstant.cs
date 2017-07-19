@@ -21,5 +21,8 @@ namespace TimeLineDataEditor
         public const string DATA_KEY_VALUE_PAIR_SEPARATOR = ",";
         public const string DATA_CODE_FORE_PART = "data.push({";
         public const string DATA_CODE_END_PART = "})";
+
+        public const string DATA_CODE_FORE_PART2 = "data.push(";
+        public const string DATA_CODE_END_PART2 = ")";
     }
 }

@@ -146,6 +146,17 @@ namespace TimeLineDataEditor
         }
 
         /// <summary>
+        /// 获取一条完整的data.push语句
+        /// </summary>
+        /// <returns></returns>
+        public string GetDataCodeString(string dataString)
+        {
+            string code = EditorConstant.DATA_CODE_FORE_PART2 + System.Environment.NewLine;
+            code = code + dataString + EditorConstant.DATA_CODE_END_PART2;
+            return code;
+        }
+
+        /// <summary>
         /// 通过解析codeLine，把其中包含的键值对提取出来
         /// </summary>
         /// <param name="codeLine"></param>

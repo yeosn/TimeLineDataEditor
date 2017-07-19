@@ -84,6 +84,18 @@ namespace TimeLineDataEditor
             fs.Close();
         }
 
+        public void WriteToJsFile(string fileFullName, string content)
+        {
+            FileStream fs = new FileStream(fileFullName, FileMode.OpenOrCreate);
+            //获得字节数组
+            byte[] data = System.Text.Encoding.Default.GetBytes(content);
+            //开始写入
+            fs.Write(data, 0, data.Length);
+            //清空缓冲区、关闭流
+            fs.Flush();
+            fs.Close();
+        }
+
         /// <summary>
         /// 解析Js代码，把代码按一定规则拆分并存储到容器中
         /// </summary>
